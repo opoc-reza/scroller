@@ -1,9 +1,34 @@
 let scroller = document.querySelector("#scroller");
 let menu = document.querySelector(".menu");
+let sperator = document.querySelector('.sperator')
+let specs = document.querySelectorAll('.spec')
 window.addEventListener("scroll", () => {
   scrollBar();
   hideMenu();
+  numberStart()
 });
+
+let checkForFirst = false
+
+function numberStart () {
+  let scrollTop = document.documentElement.scrollTop
+  if (scrollTop > sperator.offsetTop - 500) {
+    if (!checkForFirst) {
+      for (let item of specs) {
+        let goalItem = item.dataset.goal
+        let timer = setInterval(() => {
+          if (item.innerHTML == goalItem) {
+            clearInterval(timer)
+            
+          }
+          item.innerHTML++
+        }, 1)
+      }
+      checkForFirst = true
+    }
+
+  }
+}
 
 let counter;
 function hideMenu() {
