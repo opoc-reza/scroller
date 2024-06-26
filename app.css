@@ -1,0 +1,46 @@
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+.menu {
+  padding: 2rem;  
+  background-color: goldenrod;
+  margin: 0 auto;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: fixed;
+  right : 0 ;
+  left: 0;
+  transition: all 200ms ease-in-out;
+}
+.menu__item {
+
+}
+.menu__link {
+    font-size: 4rem;
+    color: black;
+    font-weight: bold;
+}
+p {
+    font-size: 3rem;
+}
+#scroller {
+    width: ;
+    z-index: 3;
+    height: 0.5rem;
+    position: fixed;
+    background-color: red;
+}
+
+.handler {
+    opacity: 0;
+}
